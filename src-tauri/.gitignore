@@ -1,0 +1,33 @@
+# =============================================================================
+# Tauri / Rust — src-tauri .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Cargo build artefacts
+# -----------------------------------------------------------------------------
+/target/
+
+# Cargo.lock is intentionally tracked for binary crates (apps).
+# Remove the line below if you want to ignore it (not recommended for apps).
+# Cargo.lock
+
+# -----------------------------------------------------------------------------
+# Tauri generated files
+# -----------------------------------------------------------------------------
+# JSON schemas generated at build time for capability auto-completion.
+# They are re-generated on every `tauri dev` / `tauri build` run.
+/gen/schemas/
+
+# Tauri bundler output
+/bundle/
+
+# WiX (Windows installer) intermediates
+WixToolset*/
+*.wixobj
+*.wixpdb
+
+# -----------------------------------------------------------------------------
+# OS generated files
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
